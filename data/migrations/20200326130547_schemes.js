@@ -1,10 +1,7 @@
 exports.up = function(knex) {
   return knex.schema.createTable("schemes", (tbl) => {
     tbl.increments();
-    tbl
-      .string("scheme_name", 128)
-      .unique()
-      .notNullable();
+    tbl.string("scheme_name", 50).notNullable();
   });
 };
 
